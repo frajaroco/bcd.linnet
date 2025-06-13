@@ -1,0 +1,16 @@
+Package: bcd.linnet
+Type: Package
+Title: Box-counting dimension for analyzing second-order properties of pseudostationarity point processes on linear
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Rodréguez-Cortés", "Francisco J.",
+      email = "frrodriguezc@unal.edu.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: More about what it does (maybe more than one line).
+    Continuation lines should be indented.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
