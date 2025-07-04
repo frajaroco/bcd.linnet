@@ -14,10 +14,7 @@ if(is.null(nsimev)) {
 } else {
   tsim=nsimev}
 
-sim <- rpoislpp(n/k,domain(X), nsim=tsim)
-D <- lapply(1:tsim, function(x){box_count_dim(sim[[x]])})
-D_m <- t(matrix(unlist(D),nrow=3,ncol=tsim))
-D_sim <- D_m[,1]-D_m[,2]
+D_sim <- box_count_dim_pois(X, ns = tsim)$D
 B_calc <- BCD$D_theo-BCD$D_est
 q1=quantile(D_sim, 0.025)
 q3=quantile(D_sim, 0.975)
