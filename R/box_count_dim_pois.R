@@ -34,7 +34,7 @@ box_count_dim_pois <- function(X, ns){
     x_2=log(n_end[[i]]-1)
     y_1=log(1-exp(-n_end[[i]]))
     y_2=log(n_end[[i]]-1)+log(1-exp(-(n_end[[i]]/(n_end[[i]]-1))))
-  y_2_estimated=log(N_end[[i]])
+    y_2_estimated=log(N_end[[i]])
   return((y_2_estimated-y_1)/(x_2-x_1)+(log(1-exp(-n_end[[i]])))/(log(n_end[[i]]-1)))
   }))
   
