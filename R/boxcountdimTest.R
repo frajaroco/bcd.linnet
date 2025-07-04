@@ -5,10 +5,6 @@ boxcountdimTest <- function(X ,nsimev=NULL){
 verifyclass(X,"lpp") 
 BCD <- box_count_dim(X)
 
-# Parameters
-k <- volume(domain(X))
-n <- npoints(X)
-
 if(is.null(nsimev)) {
   tsim=100
 } else {
