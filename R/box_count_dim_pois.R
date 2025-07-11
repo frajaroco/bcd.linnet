@@ -13,7 +13,7 @@ box_count_dim_pois <- function(X, ns){
   n_end <- unlist(lapply(1:ns, function(y){npoints(linepoi[[y]])}))
 
   k0 <- function(i){lapply(1:(i+1), function(x){(x-1)*k/i})}
-  count <- lapply(1:ns, function(y){table(cut(linepoi[[y]]$data$x, breaks = c(as.numeric(k0(n_end[[y]]))), 
+  count <- lapply(1:ns, function(y){table(cut(linepoi[[y]]$data$x, breaks = c(as.numeric(k0(n_end[[y]]-1))), 
                                 include.lowest = TRUE, right = FALSE))})
   N_end <- unlist(lapply(1:ns, function(y){sum(unlist(count[[y]]) != 0)}))
   
