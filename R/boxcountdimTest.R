@@ -1,5 +1,5 @@
 # Function log-log test
-boxcountdimTest <- function(X, nsimev=100, alpha=0.05){
+boxcountdimTest <- function(X, nsimev=1000, alpha=0.05){
 
 # X is a lpp object
 verifyclass(X,"lpp") 
